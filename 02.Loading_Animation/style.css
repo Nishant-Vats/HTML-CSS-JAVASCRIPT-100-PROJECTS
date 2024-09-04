@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #00008bcb;
+}
+.wrapper{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper .loader{
+   display: flex;
+   justify-content: space-evenly;
+   padding: 0 20px;
+}
+.loading{
+    height: 30px;
+    width: 30px;
+    margin: 0 10px;
+    border-radius: 50px;
+    background: #fff;
+    animation: load 0.8s ease infinite;
+}
+.loader .loading.one{
+    animation-delay: 0.3s;
+}
+.loader .loading.two{
+    animation-delay: 0.4s;
+}
+.loader .loading.three{
+    animation-delay: 0.5s;
+}
+@keyframes load {
+    0%{
+        height: 30px;
+        width: 30px;
+    }
+    50%{
+        height: 20px;
+        width: 20px;
+    }
+}
