@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: skyblue;
+}
+a{
+    height: 5%;
+    width: 30%;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+a::before{
+    position: absolute;
+    content: "TooltipText";
+    bottom: 70px;
+    right: -30px;
+    height: 100%;
+    width: 100%;
+    color: white;
+    background: black;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    transform: translateY(35%);
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    transition: all 0.4s;
+}
+a::after{
+    position: absolute;
+    content: "";
+    left: 75px;
+    top: -50px;
+    width: 20px;
+    height: 20px;
+    background: black;
+    transform: translateY(100%) rotate(45deg);
+    opacity: 0;
+    transition: all 0.4s;
+}
+a:hover::after{
+    transform: rotate(45deg);
+    opacity: 1;
+}
+a:hover::before{
+    opacity: 1;
+    transform: translateY(0%);
+}
