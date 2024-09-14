@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    height: 100vh;
+    background: black;
+    color: white;
+}
+.content{
+    padding: 4rem;
+}
+section{
+    border: 2px solid white;
+    margin: 20px 0;
+    padding: 20px;
+}
+section h1{
+    margin: 10px 0;
+    color: crimson;
+}
+.scroll-indicator{
+    position: fixed;
+    height: 5px;
+    width: calc(100% - 6em);
+    top: 10px;
+    left: 3em;
+    border-radius: 3px;
+    /* background: red; */
+}
+.progress{
+    height: 100%;
+    width: 0px;
+    border-radius: 3px;
+    transition: width 0.1s;
+    /* background: linear-gradient(30deg, #4158D0, #C850C0); */
+    background: yellow;
+}
