@@ -1,0 +1,60 @@
+:root{
+    --primary-color: white;
+    --primary-label: black;
+    --secondary-label: white;
+    --white-ball: white;
+    --black-ball: black;
+}
+body{
+    background: var(--primary-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* Checked box hidden*/
+#switch{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+label{
+    display: block;
+    height: 50px;
+    width: 100px;
+    background: var(--primary-label);
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+}
+label::after{
+    position: absolute;
+    content: "";
+    height: 40px;
+    width: 40px;
+    background: var(--white-ball);
+    border-radius: 70px;
+    top: 5px;
+    left: 5px;
+    transition: 0.5s;
+}
+/* #switch:checked + label::after{
+    background-color: var(--black-ball);
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+} */
+
+#switch:checked + label::after{
+    background-color: var(--black-ball);
+    left: 95px;
+    transform: translateX(-100%);
+ }
+
+#switch:checked + label{
+    background: var(--secondary-label);
+}
+
+label:active::after{
+    width: 60px;
+}
